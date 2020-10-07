@@ -6,6 +6,10 @@ h3 {
     margin: 0;
 }
 
+main {
+    margin-top: 5rem;
+}
+
 .card {
     width: 18rem;
 }
