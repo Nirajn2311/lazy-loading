@@ -2,6 +2,7 @@ let counter = 13
 
 main = document.getElementById("images")
 
+// This function generates the rows of images to be added when we reach the end of webpage
 function addImages() {
     for (let i = 0; i < 2; i++) {
         row = document.createElement("div")
@@ -23,6 +24,8 @@ function addImages() {
     }
 }
 
+// Images are made to lazy-load using the IntersectionObserver API so that when the image comes into the view of the user,
+// the image then loads up
 function lazyLoad() {
     let lazyImages = document.querySelectorAll(".lazy")
     let imageObserver = new IntersectionObserver(entries => {
@@ -42,6 +45,8 @@ function lazyLoad() {
     })
 }
 
+// Whenever we scroll, the below event checks the sum of top of the windows position, the height of the window and 100
+// & compares it with the document height so that when we're near the bottom it loads up the next set of images.
 $(window).scroll(function () {
     if ($(window).scrollTop() + $(window).height() + 100 >= $(document).height()) {
         addImages()
@@ -50,4 +55,6 @@ $(window).scroll(function () {
     lazyLoad()
 });
 
+// When the document has been loaded and ready, we again add lazyload for images of first set as in mobiles we don't see all
+// the images at the same time
 $(document).ready(lazyLoad);
