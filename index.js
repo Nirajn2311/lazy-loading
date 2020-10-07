@@ -12,7 +12,7 @@ function addImages() {
             col.classList.add("col-sm", "text-center")
             img = document.createElement("img")
             img.classList.add("img-fluid", "img-thumbnail", "lazy")
-            img.setAttribute("src", "https://picsum.photos/id/870/300/300?grayscale&blur=2")
+            img.setAttribute("src", "https://picsum.photos/id/870/400/600?grayscale&blur=2")
             img.setAttribute("data-src", "https://picsum.photos/400/600?random" + counter)
             img.setAttribute("loading", "lazy")
             counter++
