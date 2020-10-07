@@ -1,4 +1,4 @@
-let counter = 13
+let counter = 13 // Counter to generate random Lorem Picsum images instead of same one
 
 main = document.getElementById("images")
 
