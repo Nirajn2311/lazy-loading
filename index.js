@@ -31,7 +31,6 @@ function lazyLoad() {
     let imageObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log('Loading images...')
                 let image = entry.target
                 image.src = image.dataset.src
                 image.classList.remove("lazy")
@@ -50,7 +49,6 @@ function lazyLoad() {
 $(window).scroll(function () {
     if ($(window).scrollTop() + $(window).height() + 100 >= $(document).height()) {
         addImages()
-        console.log('Lazy loading...')
     }
     lazyLoad()
 });
