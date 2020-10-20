@@ -1,6 +1,4 @@
-# WEBCLUB DSC Recruitments 
-
-## TASK - Lazy Loading
+# Lazy Loading
 
 The site can be accessed at [lazy-loading-wc.netlify.app](lazy-loading-wc.netlify.app) or by setting up the project locally.
 
